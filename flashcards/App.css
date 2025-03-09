@@ -1,0 +1,105 @@
+html{
+  height: 100%;
+}
+#root{
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+body{
+  background-color:rgb(219, 181, 110);
+  height: 100%;
+  background-image: url('back.png');
+}
+.card-front{
+  background-color: white;
+  width: 40em;
+  display:flex;
+  justify-content:center;
+  flex-direction: column;
+  align-items: center;
+  padding:1em;
+  height: 80%;
+  border-radius: 2px;
+}
+.arrange-btn{
+  align-items: space-around;
+  justify-content: center;
+  align-items: center;
+  
+}
+button{
+  color: white;
+  background-color:black;
+  width: 10em;
+  height: 5em;
+  border-radius: 12px;
+  
+  border: 1px white solid;
+}
+.top-arrange{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 15%;
+  margin-bottom: 3em;
+  margin-left: 2em;
+  margin-right: 10em;
+  color: white;
+  
+}
+
+.App{
+  display:flex;
+  justify-content:center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+img{
+  width: 400px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.Flash-container{
+  position:relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 12px;
+ 
+  height: 100%;
+}
+.Flash-container.flipped {
+  transform: rotateY(180deg);
+}
+.card-outer{
+  background-color: white;
+  width: 40em;
+  display:flex;
+  justify-content:center;
+  
+  align-items: center;
+  padding:1em;
+  border-radius: 2px;
+  perspective: 1000px;
+}
+
+.card-back{
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+  font-size: 20px;
+  display: flex;
+  justify-content:center;
+  
+}
+.tiny{
+  color: white;
+  margin-left: 5em;
+}
+.card-front, .card-back {
+  
+  
+  backface-visibility: hidden;
+  border-radius: 12px;
+}
