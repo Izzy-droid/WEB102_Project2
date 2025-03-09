@@ -1,5 +1,5 @@
 # WEB102_Project2
-# Web Development Project 2 - *Name of App Here*
+# Web Development Project 2 - Learn Spanish
 
 Submitted by: Isabella Mitchell
 
@@ -14,7 +14,7 @@ The following **required** functionality is completed:
 - [X] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
 - [X] **A single card at a time is displayed, only showing one of the components of the information pair**
 - [X] **A list of card pairs is created**
-- [ ] **Clicking on the card shows the corresponding component of the information pair**
+- [X] **Clicking on the card shows the corresponding component of the information pair**
 - [X] **Clicking the next button displays a random new card**
 
 The following **optional** features are implemented:
@@ -33,8 +33,12 @@ Here's a walkthrough of implemented required features:
 
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+2- ![WEB102-2](https://github.com/user-attachments/assets/e25216f9-c429-4332-83b0-138435031689)
+
+
+
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with Kap 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
