@@ -38,16 +38,41 @@ const App = () => {
     setCurrentIndex(Math.floor(Math.random()*flashcards.length));
   }, [flashcards.length]);
 
-  const handleNext = () => {
+  const handleRandom = () => {
     setCurrentIndex(Math.floor(Math.random() * flashcards.length));
   };
+ //next index card
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % flashcards.length);
+  };
 
+  const handlePrev = () => {
+   setCurrentIndex((prevIndex) => (prevIndex - 1 + flashcards.length)% flashcards.length);
+  };
   //flipping card here:
   const [isFlipped, setIsFlipped] = useState(false);
     const flipCard = () => {
         setIsFlipped(!isFlipped);
   
     };
+   const [wronginput, setwronginput] = useState();
+   
+  const [userInput, setuserInput] = useState('');
+  const handleInputChange = (e) => {
+    setuserInput(e.target.value);
+    
+    }
+    
+   const handleSubmit = (e) => {
+     e.preventDefault()
+     if(userInput === flashcards[currentIndex].answer){
+      setwronginput(false);
+
+     }
+     else{
+      setwronginput(true);
+     }
+   };
 
   return (
     <div className="App">
@@ -67,10 +92,26 @@ const App = () => {
       
         </div>
       </div>
+       {/*make input wrong on toggle when answer isnt right*/}
+      <div className="arrange-input">
+        <form onSubmit={handleSubmit}>
+           <label htmlFor="inputquestion" id="inputquestion">Guess what it is?: </label>
+           <input type="text" id="inputtext" onChange={handleInputChange} value={userInput} className={`${wronginput === true ? 'inputwrong': wronginput === false ? 'correct': ''}`} />
+           &nbsp;
+           &nbsp;
+           <input id="submit-btn"type="submit" value="Submit"  /> 
+        </form>
+      </div>
 
+      
       <div className="arrange-btn">
-          <button className="move-btn" > ← </button>
+          <button className="move-btn"  onClick={handlePrev}> ← </button>
+          &nbsp;
           <button className="move-btn" onClick={handleNext}> → </button>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <button className="move-btn" onClick={handleRandom}> Shuffle Cards</button>
         </div>
    
        
