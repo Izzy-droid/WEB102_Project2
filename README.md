@@ -44,6 +44,8 @@ GIF created with Kap
 
 Describe any challenges encountered while building the app.
 
+Mainly learning event handler and trying to toggle the class for the right and wrong inputs
+
 ## License
 
     Copyright [yyyy] [name of copyright owner]
